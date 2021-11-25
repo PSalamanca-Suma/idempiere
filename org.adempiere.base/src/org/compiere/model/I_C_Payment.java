@@ -802,15 +802,32 @@ public interface I_C_Payment
 	  * The Payment/Receipt is a Prepayment
 	  */
 	public boolean isPrepayment();
-
-    /** Column name IsReceipt */
+	/** Column name IsReceipt */
     public static final String COLUMNNAME_IsReceipt = "IsReceipt";
 
 	/** Set Receipt.
 	  * This is a sales transaction (receipt)
 	  */
 	public void setIsReceipt (boolean IsReceipt);
+	
+	/* Set IsCash */
+	/** Column name IsCash */
+    public static final String COLUMNNAME_IsCash = "IsCash";
 
+	/** Set IsCash.
+	  * This is a sales transaction (IsCash)
+	  */
+	public void setIsCash (boolean IsCash);
+	
+	/* Set IsSotrx */
+	/** Column name IsSOTrx */
+    public static final String COLUMNNAME_IsSOTrx = "IsSOTrx";
+
+	/** Set IsSOTrx.
+	  * This is a sales transaction (IsSOTrx)
+	  */
+	public void setIsSOTrx (boolean IsSOTrx);
+	
 	/** Get Receipt.
 	  * This is a sales transaction (receipt)
 	  */
@@ -1291,4 +1308,36 @@ public interface I_C_Payment
 	  * Amount to write-off
 	  */
 	public BigDecimal getWriteOffAmt();
+	
+	/**
+	 * Author: David Marquez
+	 * Email: davidmarsant@gmail.com
+	 * Date: 2021/11/17
+	 */
+	
+	/**	Column name SalesRep_ID */
+	public static final String COLUMNNAME_SalesRep_ID = "SalesRep_ID";
+	
+	/** Set SalesRep ID
+	  * Sales Rep
+	  */
+	public void setSalesRep_ID (int SalesRep_ID);
+	
+	/** Get SalesRep ID
+	  * Sales Rep
+	  */
+	public int getSalesRep_ID();
+	
+	/** Column name User1_ID */
+    public static final String COLUMNNAME_SM_Usuario_ID = "SM_Usuario_ID";
+
+	/** Set User Element List 1.
+	  * User defined list element #1
+	  */
+	public void setSM_Usuario_ID (int SM_Usuario_ID);
+
+	/** Get User Element List 1.
+	  * User defined list element #1
+	  */
+	public int getSM_Usuario_ID();
 }
